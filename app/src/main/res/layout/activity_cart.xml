@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:paddingTop="48dp"
     tools:context=".CartActivity"> <!-- Cambiado a .CartActivity -->
 
     <LinearLayout
@@ -32,27 +33,28 @@
         -->
 
         <!-- POR ESTE CONTENEDOR DINÁMICO: -->
+        <!-- 'weight' ayuda a empujar el total hacia abajo -->
+
+        <!-- Contenedor para el total y el botón de pago -->
         <LinearLayout
             android:id="@+id/cartContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1" /> <!-- 'weight' ayuda a empujar el total hacia abajo -->
+            android:layout_weight="1"
+            android:orientation="vertical" />
 
-        <!-- Contenedor para el total y el botón de pago -->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="250dp"
             android:padding="16dp">
 
             <TextView
                 android:id="@+id/totalText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:text="@string/total_label"
-                android:textSize="18sp"
-                android:textColor="@android:color/black"/>
+                android:textColor="#757575"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/payButton"

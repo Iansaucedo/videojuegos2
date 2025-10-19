@@ -17,13 +17,13 @@
     <!-- Menu buttons -->
     <string name="button_buy">COMPRAR</string>
     <string name="button_sell">VENDER</string>
+    <string name="price_label">Precio:</string>
 
     <!-- Cart screen -->
     <string name="shopping_cart">Cesta de la compra</string>
     <string name="pay_button">PAGAR</string>
     <string name="total_label">Total:</string>
     <string name="cart_empty">Tu carrito está vacío</string>
-    <string name="price_label">Precio: </string>
     <string name="remove_button">ELIMINAR</string>
 
     <!-- Payment screen -->
