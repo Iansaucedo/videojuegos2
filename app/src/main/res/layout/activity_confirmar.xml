@@ -25,7 +25,7 @@
         android:id="@+id/tvConfirmarTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CONFIRMAR REGISTRO"
+        android:text="@string/register_confirm_title"
         android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="#7E57C2"

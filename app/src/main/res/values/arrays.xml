@@ -7,4 +7,32 @@
         <item>Nintendo</item>
         <item>PC</item>
     </string-array>
+    <!-- ... otros arrays ... -->
+
+    <!-- Array para los precios de los juegos -->
+    <string-array name="game_prices">
+        <item>59.99</item>
+        <item>45.50</item>
+        <item>49.99</item>
+    </string-array>
+    <!-- Array para los títulos de los juegos -->
+    <string-array name="game_titles">
+        <item>@string/game1_title</item>
+        <item>@string/game2_title</item>
+        <item>@string/game3_title</item>
+    </string-array>
+
+    <!-- Array para las descripciones de los juegos -->
+    <string-array name="game_descriptions">
+        <item>@string/game1_desc</item>
+        <item>@string/game2_desc</item>
+        <item>@string/game3_desc</item>
+    </string-array>
+
+    <!-- Array para las imágenes de los juegos -->
+    <array name="game_images">
+        <item>@drawable/vjuego1</item>
+        <item>@drawable/vjuego2</item>
+        <item>@drawable/vjuego3</item>
+    </array>
 </resources>

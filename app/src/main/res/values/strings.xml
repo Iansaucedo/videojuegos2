@@ -1,4 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Original Strings -->
     <string name="app_name">videojuegos</string>
     <string name="title_games">Videojuegos en venta</string>
     <string name="game1_title">The Legend of Zelda: Tears of the Kingdom</string>
@@ -10,5 +12,61 @@
     <string name="buy">COMPRAR</string>
     <string name="cart_title">Cesta de la compra</string>
     <string name="pay">PAGAR</string>
+
+    <!-- Merged Strings -->
+    <!-- Menu buttons -->
+    <string name="button_buy">COMPRAR</string>
+    <string name="button_sell">VENDER</string>
+
+    <!-- Cart screen -->
+    <string name="shopping_cart">Cesta de la compra</string>
+    <string name="pay_button">PAGAR</string>
+    <string name="total_label">Total:</string>
+    <string name="cart_empty">Tu carrito está vacío</string>
+    <string name="price_label">Precio: </string>
+    <string name="remove_button">ELIMINAR</string>
+
+    <!-- Payment screen -->
+    <string name="payment_title">Pago</string>
+    <string name="payment_amount">Monto a pagar:</string>
+    <string name="confirm_payment">Confirmar pago</string>
     <string name="payment_success">¡Pago realizado con éxito!</string>
+
+    <!-- Registration screen -->
+    <string name="register_title">REGISTRO</string>
+    <string name="register_name">Nombre</string>
+    <string name="register_lastname">Apellidos</string>
+    <string name="register_address">Domicilio</string>
+    <string name="register_dni">DNI</string>
+    <string name="register_email">Email</string>
+    <string name="register_password">Contraseña</string>
+    <string name="register_bank_account">Cuenta Bancaria</string>
+    <string name="register_button">REGISTRARSE</string>
+    <string name="register_confirm_title">CONFIRMAR REGISTRO</string>
+
+    <!-- Selling screen -->
+    <string name="sell_title">VENDER</string>
+    <string name="game_name">Título del Videojuego</string>
+    <string name="game_platform">Plataforma</string>
+    <string name="game_condition">Estado (Nuevo, Usado, etc.)</string>
+    <string name="game_price">Precio (€)</string>
+    <string name="game_description">Descripción</string>
+    <string name="upload_image">SUBIR IMAGEN</string>
+    <string name="publish_button">PUBLICAR VIDEOJUEGO</string>
+
+    <!-- Confirmation screens -->
+    <string name="game_published">¡Videojuego publicado!</string>
+    <string name="sale_confirmed">¡Venta confirmada!</string>
+    <string name="purchase_confirmed">¡Compra confirmada!</string>
+
+    <!-- Error messages -->
+    <string name="error_campo_obligatorio">Este campo es obligatorio</string>
+    <string name="error_dni_invalido">DNI inválido (formato: 12345678A)</string>
+    <string name="error_invalid_email">Email inválido</string>
+    <string name="error_contraseña_corta">La contraseña debe tener al menos 6 caracteres</string>
+    <string name="error_cuenta_bancaria_invalida">IBAN inválido (formato: ES + 22 dígitos)</string>
+    <string name="error_payment">Error en el pago. Intente nuevamente.</string>
+    <string name="error_connection">Error de conexión. Verifique su internet.</string>
+    <string name="error_required_fields">Por favor complete todos los campos</string>
 </resources>
+    

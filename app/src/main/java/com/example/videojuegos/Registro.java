@@ -2,15 +2,20 @@ package com.example.videojuegos;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Patterns;
 import android.widget.Button;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class Registro extends AppCompatActivity {
+    private TextInputLayout tilNombre, tilApellidos, tilDomicilio, tilDNI, tilEmail, tilContraseña, tilCuentaBancaria;
+    private TextInputEditText etNombre, etApellidos, etDomicilio, etDNI, etEmail, etContraseña, etCuentaBancaria;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,22 +23,33 @@ public class Registro extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_registro);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-
+        // Initialize views
+        tilNombre = findViewById(R.id.tilNombre);
+        tilApellidos = findViewById(R.id.tilApellidos);
+        tilDomicilio = findViewById(R.id.tilDomicilio);
+        tilDNI = findViewById(R.id.tilDNI);
+        tilEmail = findViewById(R.id.tilEmail);
+        tilContraseña = findViewById(R.id.tilContraseña);
+        tilCuentaBancaria = findViewById(R.id.tilCuentaBancaria);
+        
+        etNombre = findViewById(R.id.etNombre);
+        etApellidos = findViewById(R.id.etApellidos);
+        etDomicilio = findViewById(R.id.etDomicilio);
+        etDNI = findViewById(R.id.etDNI);
+        etEmail = findViewById(R.id.etEmail);
+        etContraseña = findViewById(R.id.etContraseña);
+        etCuentaBancaria = findViewById(R.id.etCuentaBancaria);
 
         Button btnGoToMenu = findViewById(R.id.btnGoToMenu);
         btnGoToMenu.setOnClickListener(v -> {
-            String nombre = ((com.google.android.material.textfield.TextInputEditText) findViewById(R.id.etNombre)).getText().toString();
-            String apellidos = ((com.google.android.material.textfield.TextInputEditText) findViewById(R.id.etApellidos)).getText().toString();
-            String domicilio = ((com.google.android.material.textfield.TextInputEditText) findViewById(R.id.etDomicilio)).getText().toString();
-            String dni = ((com.google.android.material.textfield.TextInputEditText) findViewById(R.id.etDNI)).getText().toString();
-            String email = ((com.google.android.material.textfield.TextInputEditText) findViewById(R.id.etEmail)).getText().toString();
-            String contrasena = ((com.google.android.material.textfield.TextInputEditText) findViewById(R.id.etContraseña)).getText().toString();
-            String cuentaBancaria = ((com.google.android.material.textfield.TextInputEditText) findViewById(R.id.etCuentaBancaria)).getText().toString();
+
+                String nombre = etNombre.getText().toString();
+                String apellidos = etApellidos.getText().toString();
+                String domicilio = etDomicilio.getText().toString();
+                String dni = etDNI.getText().toString();
+                String email = etEmail.getText().toString();
+                String contrasena = etContraseña.getText().toString();
+                String cuentaBancaria = etCuentaBancaria.getText().toString();
 
             Intent intent = new Intent(Registro.this, Confirmar.class);
             intent.putExtra("nombre", nombre);
@@ -46,4 +62,6 @@ public class Registro extends AppCompatActivity {
             startActivity(intent);
         });
     }
+    
+
 }
