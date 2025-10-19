@@ -1,5 +1,6 @@
 package com.example.videojuegos;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -33,16 +34,18 @@ public class CartActivity extends AppCompatActivity {
         loadCartItems();
 
         // Configurar botón de pago
+
         payButton.setOnClickListener(v -> {
             if (totalAmount > 0) {
-                Toast.makeText(this,
-                        String.format(Locale.getDefault(), "Payment processed: %.2f€", totalAmount),
-                        Toast.LENGTH_SHORT
-                ).show();
+                Intent intent = new Intent(CartActivity.this, PaymentActivity.class);
+                intent.putExtra("TOTAL_AMOUNT", totalAmount);
+                startActivity(intent);
             } else {
-                Toast.makeText(this, "Your cart is empty!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "El carrito está vacío", Toast.LENGTH_SHORT).show();
             }
         });
+
+
     }
 
     private void loadCartItems() {

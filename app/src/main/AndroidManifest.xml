@@ -41,6 +41,8 @@
 
         <activity android:name=".Confirmar" />
         <activity android:name=".confirmacionActivity" />
+        <activity android:name=".PaymentActivity" />
+
     </application>
 
 </manifest>
