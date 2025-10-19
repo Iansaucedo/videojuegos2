@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Vender">
+
+    <!-- Invisible Toolbar for spacing and consistency -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@android:color/transparent"
+        app:title=""
+        app:titleTextColor="@android:color/white"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvVenderTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VENDER"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Título del Videojuego -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTituloVideojuego"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="32dp"
+        android:hint="Título del Videojuego"
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="#F2F2F2"
+        app:boxStrokeColor="#7E57C2"
+        app:layout_constraintTop_toBottomOf="@id/tvVenderTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ETNombreVideojuego"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Plataforma Spinner -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPlataforma"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="32dp"
+        android:hint="Plataforma"
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="#F2F2F2"
+        app:boxStrokeColor="#7E57C2"
+        app:layout_constraintTop_toBottomOf="@id/tilTituloVideojuego"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Spinner
+            android:id="@+id/desplegablePlat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:entries="@array/plataformas"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Estado -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEstado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="32dp"
+        android:hint="Estado (Nuevo, Usado, etc.)"
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="#F2F2F2"
+        app:boxStrokeColor="#7E57C2"
+        app:layout_constraintTop_toBottomOf="@id/tilPlataforma"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ETNombreVideojuego2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Precio -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPrecio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="32dp"
+        android:hint="Precio (€)"
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="#F2F2F2"
+        app:boxStrokeColor="#7E57C2"
+        app:layout_constraintTop_toBottomOf="@id/tilEstado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ETNombreVideojuego3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Subir Imagen Button -->
+    <Button
+        android:id="@+id/btSubirImagen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="32dp"
+        android:backgroundTint="#7E57C2"
+        android:text="SUBIR IMAGEN"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:elevation="4dp"
+        android:padding="14dp"
+        app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tilPrecio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Publicar Videojuego Button -->
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#7E57C2"
+        android:text="PUBLICAR VIDEOJUEGO"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:elevation="4dp"
+        android:padding="14dp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btSubirImagen" />
+</androidx.constraintlayout.widget.ConstraintLayout>

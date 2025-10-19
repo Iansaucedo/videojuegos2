@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">videojuegos</string>
+    <string name="title_games">Videojuegos en venta</string>
+    <string name="game1_title">The Legend of Zelda: Tears of the Kingdom</string>
+    <string name="game1_desc">Explora los cielos y tierras de Hyrule en una aventura épica de mundo abierto.</string>
+    <string name="game2_title">Call of Duty: Modern Warfare III</string>
+    <string name="game2_desc">Acción táctica con modos multijugador y campaña intensa.</string>
+    <string name="game3_title">Super Mario Bros. Wonder</string>
+    <string name="game3_desc">Una nueva aventura de plataformas con sorpresas dinámicas.</string>
+    <string name="buy">COMPRAR</string>
+    <string name="cart_title">Cesta de la compra</string>
+    <string name="pay">PAGAR</string>
+    <string name="payment_success">¡Pago realizado con éxito!</string>
+</resources>
