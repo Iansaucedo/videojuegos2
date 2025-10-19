@@ -29,8 +29,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:textColor="#757575"
-            android:textStyle="bold" />
+            android:textColor="@color/text_secondary"
+        android:textStyle="bold" />
 
         <!-- Price label + price -->
         <LinearLayout
@@ -44,16 +44,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/price_label"
-                android:textColor="#757575"
-                android:textSize="14sp"
-                android:paddingEnd="4dp" />
+                android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:paddingEnd="4dp" />
 
             <TextView
                 android:id="@+id/gamePrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
-                android:textColor="#757575" />
+                android:textColor="@color/text_secondary" />
         </LinearLayout>
 
         <!-- Remove button -->
@@ -63,14 +63,14 @@
             android:layout_height="40dp"
             android:layout_gravity="start"
             android:layout_marginTop="8dp"
-            android:backgroundTint="@color/design_default_color_error"
-            android:minWidth="0dp"
-            android:minHeight="0dp"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp"
-            android:text="@string/remove_button"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp" />
+            android:backgroundTint="@color/button_remove_background"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="@string/remove_button"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
 
     </LinearLayout>
 </LinearLayout>

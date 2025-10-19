@@ -12,4 +12,36 @@
     <color name="textColor">#000000</color>
     <color name="red">#FF0000</color>
 
+        <!-- App-specific named colors (added to replace hardcoded hex in layouts) -->
+    <color name="gray_666">#FF666666</color>
+    <color name="gray_757575">#FF757575</color>
+    <color name="gray_3d">#FF3D3D3D</color>
+    <color name="surface_light">#FFF6F6F9</color>
+    <color name="surface_pale">#FFF3EFFE</color>
+    <color name="accent_5b2fa6">#FF5B2FA6</color>
+    <color name="material_6200EE">#FF6200EE</color>
+    <color name="transparent_33">#33000000</color>
+    <color name="transparent_44">#44000000</color>
+    <color name="launcher_green">#FF3DDC84</color>
+    <color name="app_white">#FFFFFF</color>
+    <color name="app_black">#000000</color>
+    <color name="design_default_color_error">#B00020</color>
+
+    <!-- ===== NUEVOS COLORES A AÑADIR ===== -->
+
+    <!-- Color para el texto primario y títulos -->
+    <color name="text_primary">#000000</color>
+
+    <!-- Color para el texto secundario o etiquetas (gris) -->
+    <color name="text_secondary">#757575</color>
+
+    <!-- Color para botones de acción destructiva (eliminar) -->
+    <color name="button_remove_background">#B00020</color>
+
+    <!-- Tonos de texto -->
+
+    <!-- Colores de superficie y fondos -->
+    <color name="surface_background">#F6F6F9</color>
+
+
 </resources>
