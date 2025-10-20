@@ -11,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class Menu extends AppCompatActivity {
 
     @Override
@@ -24,7 +26,7 @@ public class Menu extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
+        FloatingActionButton fabCart = findViewById(R.id.fabCart);
         Button btnVender = findViewById(R.id.btnVender);
         Button btnComprar = findViewById(R.id.btnComprar);
         btnVender.setOnClickListener(v -> {
@@ -34,6 +36,14 @@ public class Menu extends AppCompatActivity {
         btnComprar.setOnClickListener(v -> {
             Intent intent = new Intent(Menu.this, ComprarActivity.class);
             startActivity(intent);
+        });
+
+        fabCart.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                // 3. Crear un Intent para abrir la CartActivity
+                Intent intent = new Intent(Menu.this, CartActivity.class);
+                startActivity(intent);
+            }
         });
     }
 }

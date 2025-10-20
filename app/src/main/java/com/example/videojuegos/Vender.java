@@ -3,6 +3,8 @@ package com.example.videojuegos;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 import android.widget.Spinner;
 import androidx.activity.EdgeToEdge;
@@ -19,10 +21,10 @@ public class Vender extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_vender);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+        FloatingActionButton fabCart = findViewById(R.id.fabCart);
+        fabCart.setOnClickListener(view -> {
+            Intent intent = new Intent(Vender.this, CartActivity.class);
+            startActivity(intent);
         });
 
         Button btnPublicar = findViewById(R.id.button2);

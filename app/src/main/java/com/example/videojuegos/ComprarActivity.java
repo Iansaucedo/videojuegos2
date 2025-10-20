@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class ComprarActivity extends AppCompatActivity {
 
     // Recursos de juegos
@@ -55,6 +57,12 @@ public class ComprarActivity extends AppCompatActivity {
 
             // Acción del botón: abrir CartActivity
             buyButton.setOnClickListener(v -> {
+                Intent intent = new Intent(ComprarActivity.this, CartActivity.class);
+                startActivity(intent);
+            });
+
+            FloatingActionButton fabCart = findViewById(R.id.fabCart);
+            fabCart.setOnClickListener(view -> {
                 Intent intent = new Intent(ComprarActivity.this, CartActivity.class);
                 startActivity(intent);
             });
