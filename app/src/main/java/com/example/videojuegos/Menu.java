@@ -40,7 +40,6 @@ public class Menu extends AppCompatActivity {
 
         fabCart.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                // 3. Crear un Intent para abrir la CartActivity
                 Intent intent = new Intent(Menu.this, CartActivity.class);
                 startActivity(intent);
             }
